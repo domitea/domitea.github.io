@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Čajíčkova šifra</title>
+  <meta name="description" content="Cipher">
+  <meta name="author" content="Cajicek / domitea">
+</head>
+
+<body>
+
+    <h3>Zdrojový text</h3>
+    <textarea id="text" rows="15" cols="60"></textarea><br>
+    <button type="submit" id="send" onclick="encrypt()">Šifruj</button><br>
+    <hr>
+    <div id="encrypted"></div>
+    <script type="text/javascript">
+    var codes = {
+        "a":"<img src=./abeceda/a.png />",
+        "b":"<img src=./abeceda/b.png />",
+        "c":"<img src=./abeceda/c.png />",
+        "d":"<img src=./abeceda/d.png />",
+        "e":"<img src=./abeceda/e.png />",
+        "f":"<img src=./abeceda/f.png />",
+        "g":"<img src=./abeceda/g.png />",
+        "h":"<img src=./abeceda/h.png />",
+        "i":"<img src=./abeceda/i.png />",
+        "j":"<img src=./abeceda/j.png />",
+        "k":"<img src=./abeceda/k.png />",
+        "l":"<img src=./abeceda/l.png />",
+        "m":"<img src=./abeceda/m.png />",
+        "n":"<img src=./abeceda/n.png />",
+        "o":"<img src=./abeceda/o.png />",
+        "p":"<img src=./abeceda/p.png />",
+        "q":"<img src=./abeceda/q.png />",
+        "r":"<img src=./abeceda/r.png />",
+        "s":"<img src=./abeceda/s.png />",
+        "t":"<img src=./abeceda/t.png />",
+        "u":"<img src=./abeceda/u.png />",
+        "v":"<img src=./abeceda/v.png />",
+        "w":"<img src=./abeceda/w.png />",
+        "x":"<img src=./abeceda/x.png />",
+        "y":"<img src=./abeceda/y.png />",
+        "z":"<img src=./abeceda/z.png />",
+        ".":".",
+        ",":",",
+        "!":"!",
+        "?":"?",
+        " ":"(mezera)",
+        "\n":"(enter)"
+        };
+
+    function encrypt()
+    {
+        doc = document.getElementById("text").value.toLowerCase();
+        edoc = " ";
+
+        for (var i = 0; i < doc.length; i++)
+        {
+            edoc += codes[doc[i]] 
+            edoc += " "
+        }
+
+        document.getElementById("encrypted").innerHTML = edoc;
+    }
+    </script>
+</body>
+</html>
